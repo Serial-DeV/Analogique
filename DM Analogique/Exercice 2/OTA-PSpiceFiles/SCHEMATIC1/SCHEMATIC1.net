@@ -1,0 +1,65 @@
+* source OTA
+M_M1         N00520 V- N00366 N00366 Mbreakp  
++ L=8U  
++ W=120U         
+M_M2         OUT_INT V+ N00366 N00366 MbreakP  
++ L=8U  
++ W=120U         
+M_M8         N00347 N00347 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+M_M6         OUT OUT_INT VSS VSS MbreakN  
++ L=10U  
++ W=100U         
+I_Idc         N00347 VSS DC 25uAdc  
+V_VCC+         VDD 0 5Vdc
+M_M5         N00366 N00347 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+M_M7         OUT N00347 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+V_VCC-         0 VSS 5Vdc
+M_M4         OUT_INT N00520 VSS VSS MbreakN  
++ L=10U  
++ W=50U         
+M_M3         N00520 N00520 VSS VSS Mbreakn  
++ L=10U  
++ W=50U         
+V_V+         V+ 0 DC 0 AC 1
++SIN 0 1m 10 0 0 180
+C_Cc         N060120 OUT  {Cc_var}  TC=0,0 
+R_Rc         OUT_INT N060120  {Rc_var} TC=0,0 
+V_V1         V+1 0  AC 1
++PULSE 0 5 0 1p 1p 100u 200u
+I_Idc1         N07705 VSS DC 25uAdc  
+C_Cc1         N080730 OUT_BIS  {Cc_var}  TC=0,0 
+M_M16         N07789 N07789 VSS VSS Mbreakn  
++ L=10U  
++ W=50U         
+M_M14         OUT_BIS N07705 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+M_M10         N07797 V+1 N07709 VDD MbreakP  
++ L=8U  
++ W=120U         
+M_M11         N07705 N07705 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+M_M12         OUT_BIS N07797 VSS VSS MbreakN  
++ L=10U  
++ W=100U         
+M_M15         N07797 N07789 VSS VSS MbreakN  
++ L=10U  
++ W=50U         
+R_Rc1         N07797 N080730  {Rc_var} TC=0,0 
+M_M9         N07789 OUT_BIS N07709 VDD Mbreakp  
++ L=8U  
++ W=120U         
+M_M13         N07709 N07705 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+E_E1         V- 0 V+ 0 -1
+C_CL         0 OUT  50p  TC=0,0 
+C_CL1         0 OUT_BIS  50p  TC=0,0 
+.PARAM  cc_var=5p rc_var=100k

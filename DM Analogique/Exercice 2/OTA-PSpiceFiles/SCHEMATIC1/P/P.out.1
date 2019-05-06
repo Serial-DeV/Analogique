@@ -1,0 +1,217 @@
+
+**** 04/03/16 11:45:12 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-TOTO"  [ C:\Users\Sylvain\Desktop\Enseignement_En_Cours\EI\SE3\Ana2\TP\TP3\OTA\ota-pspicefiles\schematic1\to
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "TOTO.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ota-pspicefiles/ota.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Sylvain\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TF V([OUT_INT]) V_V+
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source OTA
+M_M1         N00520 V- N00366 N00366 Mbreakp  
++ L=8U  
++ W=120U         
+M_M2         OUT_INT V+ N00366 N00366 MbreakP  
++ L=8U  
++ W=120U         
+M_M8         N00347 N00347 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+M_M6         OUT OUT_INT VSS VSS MbreakN  
++ L=10U  
++ W=100U         
+I_Idc         N00347 VSS DC 25uAdc  
+V_VCC+         VDD 0 5Vdc
+M_M5         N00366 N00347 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+M_M7         OUT N00347 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+V_VCC-         0 VSS 5Vdc
+M_M4         OUT_INT N00520 VSS VSS MbreakN  
++ L=10U  
++ W=50U         
+M_M3         N00520 N00520 VSS VSS Mbreakn  
++ L=10U  
++ W=50U         
+V_V+         V+ 0 DC 0 AC 1
++SIN 0 1m 10 0 0 180
+C_Cc         N060120 OUT  {Cc_var}  TC=0,0 
+R_Rc         OUT_INT N060120  {Rc_var} TC=0,0 
+V_V1         V+1 0  
++PULSE 0 5 0 1n 1n 1 2
+I_Idc1         N07705 VSS DC 25uAdc  
+C_Cc1         N080730 OUT_BIS  {Cc_var}  TC=0,0 
+M_M16         N07789 N07789 VSS VSS Mbreakn  
++ L=10U  
++ W=50U         
+M_M14         OUT_BIS N07705 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+M_M10         N07797 V+1 N07709 VDD MbreakP  
++ L=8U  
++ W=120U         
+M_M11         N07705 N07705 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+M_M12         OUT_BIS N07797 VSS VSS MbreakN  
++ L=10U  
++ W=100U         
+M_M15         N07797 N07789 VSS VSS MbreakN  
++ L=10U  
++ W=50U         
+R_Rc1         N07797 N080730  {Rc_var} TC=0,0 
+M_M9         N07789 OUT_BIS N07709 VDD Mbreakp  
++ L=8U  
++ W=120U         
+M_M13         N07709 N07705 VDD VDD MbreakP  
++ L=10U  
++ W=150U         
+E_E1         V- 0 V+ 0 -1
+C_CL         0 OUT  50p  TC=0,0 
+C_CL1         0 OUT_BIS  50p  TC=0,0 
+.PARAM  cc_var=5p rc_var=100k
+
+**** RESUMING TOTO.cir ****
+.END
+
+**** 04/03/16 11:45:12 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-TOTO"  [ C:\Users\Sylvain\Desktop\Enseignement_En_Cours\EI\SE3\Ana2\TP\TP3\OTA\ota-pspicefiles\schematic1\to
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mbreakp         MbreakN         
+               PMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  100.000000E-09  100.000000E-09 
+         VTO   -1               1            
+          KP   10.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA     .04             .04         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO  200.000000E-12  200.000000E-12 
+        CGDO  200.000000E-12  200.000000E-12 
+        CGBO  100.000000E-12  100.000000E-12 
+         TOX   20.000000E-09   20.000000E-09 
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 04/03/16 11:45:12 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-TOTO"  [ C:\Users\Sylvain\Desktop\Enseignement_En_Cours\EI\SE3\Ana2\TP\TP3\OTA\ota-pspicefiles\schematic1\to
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)    0.0000  (   V-)    0.0000  (  OUT)   -1.1529  (  V+1)    0.0000      
+
+(  VDD)    5.0000  (  VSS)   -5.0000  (N00347)    3.4454 (N00366)    1.3828     
+
+(N00520)   -3.5009 (N07705)    3.4454 (N07709)    1.3826 (N07789)   -3.5008     
+
+(N07797)   -3.5197 (N060120)   -3.5009                   (N080730)   -3.5197    
+
+(OUT_BIS)-257.7E-06                   (OUT_INT)   -3.5009                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VCC+      -1.615E-04
+    V_VCC-      -1.615E-04
+    V_V+         0.000E+00
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.61E-03  WATTS
+
+
+
+
+
+
+ ****     SMALL-SIGNAL CHARACTERISTICS
+
+
+      V(OUT_INT)/V_V+ = -1.461E+02
+
+      INPUT RESISTANCE AT V_V+ =  1.000E+20
+
+      OUTPUT RESISTANCE AT V(OUT_INT) =  1.047E+06
+
+
+          JOB CONCLUDED
+
+**** 04/03/16 11:45:12 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-TOTO"  [ C:\Users\Sylvain\Desktop\Enseignement_En_Cours\EI\SE3\Ana2\TP\TP3\OTA\ota-pspicefiles\schematic1\to
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

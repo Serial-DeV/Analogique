@@ -1,0 +1,18 @@
+* source DM EXERCICE1
+R_R8         N00424 OUT_R  25k TC=0,0 
+V_Vin         IN 0  
++PULSE 12 -12 0 0.999m 0.999m 0.001m 2m
+R_R5         VCC- D  50 TC=0,0 
+R_R3         C B  100 TC=0,0 
+D_D3         C N00424 D1N4148 
+R_R7         N00420 OUT_R  25k TC=0,0 
+D_D2         N00420 B D1N4148 
+V_Valim-         0 VCC- 12
+V_Valim+         VCC+ 0 12
+R_R4         D C  50 TC=0,0 
+R_R6         OUT_R IN  10k TC=0,0 
+D_D4         D OUT_R D1N4148 
+D_D1         OUT_R A D1N4148 
+X_U1A         OUT_R OUT VCC+ VCC- OUT TL082
+R_R1         A VCC+  50 TC=0,0 
+R_R2         B A  50 TC=0,0 

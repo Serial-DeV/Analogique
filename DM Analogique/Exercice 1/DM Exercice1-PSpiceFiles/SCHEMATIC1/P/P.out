@@ -1,0 +1,170 @@
+
+**** 04/29/19 12:05:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P"  [ C:\Users\Emmanuel\Desktop\DM Analogique\Exercice 1\dm exercice1-pspicefiles\schematic1\p.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "P.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DM EXERCICE1
+R_R8         N00424 OUT_R  25k TC=0,0 
+V_Vin         IN 0  
++PULSE 12 -12 0 0.999m 0.999m 0.001m 2m
+R_R5         VCC- D  50 TC=0,0 
+R_R3         C B  100 TC=0,0 
+D_D3         C N00424 D1N4148 
+R_R7         N00420 OUT_R  25k TC=0,0 
+D_D2         N00420 B D1N4148 
+V_Valim-         0 VCC- 12
+V_Valim+         VCC+ 0 12
+R_R4         D C  50 TC=0,0 
+R_R6         OUT_R IN  10k TC=0,0 
+D_D4         D OUT_R D1N4148 
+D_D1         OUT_R A D1N4148 
+X_U1A         OUT_R OUT VCC+ VCC- OUT TL082
+R_R1         A VCC+  50 TC=0,0 
+R_R2         B A  50 TC=0,0 
+
+**** RESUMING P.cir ****
+.END
+
+**** 04/29/19 12:05:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P"  [ C:\Users\Emmanuel\Desktop\DM Analogique\Exercice 1\dm exercice1-pspicefiles\schematic1\p.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_U1A.dx        X_U1A.dy        
+          IS    2.682000E-09  800.000000E-18  800.000000E-18 
+           N    1.836                                        
+         ISR    1.565000E-09                                 
+         IKF     .04417                                      
+          BV  100                                            
+         IBV  100.000000E-06                                 
+          RS     .5664                          1.000000E-03 
+          TT   11.540000E-09                                 
+         CJO    4.000000E-12                   10.000000E-12 
+          VJ     .5                                          
+           M     .3333                                       
+
+
+**** 04/29/19 12:05:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P"  [ C:\Users\Emmanuel\Desktop\DM Analogique\Exercice 1\dm exercice1-pspicefiles\schematic1\p.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.jx1       X_U1A.jx2       
+               NJF             NJF             
+         VTO   -1              -1            
+        BETA  222.070000E-06  222.070000E-06 
+          IS  100.000000E-12  100.000000E-12 
+
+
+**** 04/29/19 12:05:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P"  [ C:\Users\Emmanuel\Desktop\DM Analogique\Exercice 1\dm exercice1-pspicefiles\schematic1\p.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)    8.0131  (    B)    4.0169  (    C)   -3.9916  (    D)   -7.9958      
+
+(   IN)   12.0000  (  OUT)    8.5376  ( VCC+)   12.0000  ( VCC-)  -12.0000      
+
+(OUT_R)    8.5379  (N00420)    4.5346 (N00424)    8.5377 (X_U1A.6)-804.7E-06    
+
+(X_U1A.7)    8.5376                   (X_U1A.8)    8.5376                       
+
+(X_U1A.9)    0.0000                   (X_U1A.10)    8.9243                      
+
+(X_U1A.11)   11.5570                  (X_U1A.12)   11.5560                      
+
+(X_U1A.53)    9.6842                  (X_U1A.54)   -9.6842                      
+
+(X_U1A.90)-184.7E-09                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin       -3.462E-04
+    V_Valim-    -9.838E-02
+    V_Valim+    -9.804E-02
+    X_U1A.vb    -8.047E-09
+    X_U1A.vc     1.147E-12
+    X_U1A.ve     1.955E-11
+    X_U1A.vlim  -1.847E-10
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   2.36E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/29/19 12:05:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P"  [ C:\Users\Emmanuel\Desktop\DM Analogique\Exercice 1\dm exercice1-pspicefiles\schematic1\p.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

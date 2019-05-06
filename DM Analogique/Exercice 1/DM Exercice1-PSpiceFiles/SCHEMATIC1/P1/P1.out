@@ -1,0 +1,130 @@
+
+**** 04/22/19 15:58:05 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P1"  [ D:\OrCAD\DM Exercice1-PSpiceFiles\SCHEMATIC1\P1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "P1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\Programmes\OrCAD\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DM EXERCICE1
+R_R8         N00424 IN2  25k TC=0,0 
+V_Vin         IN 0  
++PULSE 12 -12 0 0.999m 0.999m 0.001m 2m
+R_R5         VCC- D  50 TC=0,0 
+R_R3         C B  100 TC=0,0 
+R_R1         B A  50 TC=0,0 
+R_R2         A VCC+  50 TC=0,0 
+D_D3         C N00424 D1N4148 
+R_R7         N00420 IN2  25k TC=0,0 
+D_D2         N00420 B D1N4148 
+V_Valim-         0 VCC- 12
+V_Valim+         VCC+ 0 12
+R_R4         D C  50 TC=0,0 
+R_R6         IN2 IN  10k TC=0,0 
+D_D1         IN2 A D1N4148 
+D_D4         D IN2 D1N4148 
+
+**** RESUMING P1.cir ****
+.END
+
+**** 04/22/19 15:58:05 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P1"  [ D:\OrCAD\DM Exercice1-PSpiceFiles\SCHEMATIC1\P1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 04/22/19 15:58:05 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P1"  [ D:\OrCAD\DM Exercice1-PSpiceFiles\SCHEMATIC1\P1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)    8.0131  (    B)    4.0169  (    C)   -3.9916  (    D)   -7.9958      
+
+(   IN)   12.0000  (  IN2)    8.5379  ( VCC+)   12.0000  ( VCC-)  -12.0000      
+
+(N00420)    4.5346 (N00424)    8.5377 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin       -3.462E-04
+    V_Valim-    -8.008E-02
+    V_Valim+    -7.974E-02
+
+    TOTAL POWER DISSIPATION   1.92E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/22/19 15:58:05 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-P1"  [ D:\OrCAD\DM Exercice1-PSpiceFiles\SCHEMATIC1\P1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

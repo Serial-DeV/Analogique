@@ -1,0 +1,24 @@
+* PSpice Model Editor - Version 16.6.0
+*$
+.model Mbreakp PMOS(
++ LEVEL = 1
++ TOX = 200E-10
++ VTO = -1
++ KP = 10E-6
++ LAMBDA = 0.04
++ LD = 100E-9
++ CGDO = 200E-12
++ CGSO = 200E-12
++ CGBO = 1E-10)
+*$
+.model Mbreakn NMOS(
++ LEVEL = 1
++ TOX = 200E-10
++ VTO = 1
++ KP = 20E-6
++ LAMBDA = 0.04
++ LD = 100E-9
++ CGDO = 200E-12
++ CGSO = 200E-12
++ CGBO = 1E-10)
+*$
